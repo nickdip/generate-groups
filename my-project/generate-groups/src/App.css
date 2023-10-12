@@ -1,0 +1,50 @@
+
+
+.App {
+  text-align: center;
+}
+
+/* column groups */
+.group0 {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(251, 114, 114);
+  opacity: 0.9
+}
+
+.group1 {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(25, 168, 0);
+  opacity: 0.9;
+}
+
+
+.group2 {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(0, 221, 255);
+  opacity: 0.9;
+}
+
+.group3 {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(208, 192, 203, 0.754);
+  opacity: 0.9
+}
+
+
+.name {
+  padding: 20px;
+}
+
+.namesTable {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
