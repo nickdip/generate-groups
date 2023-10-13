@@ -35,8 +35,8 @@ export const exampleNames = [
 
 export function generateTable(names) {
 
-    if (!names.length) return {}
-    
+    if (!names.length) return {0:[]}
+
     const tabledNames = {}
     let row = 0 
     names.forEach((name, index) => {

@@ -1,14 +1,14 @@
 
-function addNames() {
+function AddNames(  { currentNames, updateNames }) {
 
     return (
         <form>
-        <input type="text" placeholder="Darth Vadar" value={groupNumber} onChange={ event => setGroupNumber(event.target.value)}/>
-        <label> groups </label>
-        <button type="button" onClick={() => {
-        }}>Add Name!</button>
+        <label htmlFor={currentNames}> Add Name(s):</label>
+        <input type="text" placeholder="Darth Vadar" value={currentNames} onChange={ e => updateNames(e.target.value)}/>
         </form>
     )
 
 
 }
+
+export default AddNames;

@@ -7,7 +7,7 @@ function generateGroups( { names, updateNames, updateGroupedTable }) {
     return (
         <form>
         <label>Split everyone into</label>
-        <input type="text" placeholder="1" value={groupNumber} onChange={ event => setGroupNumber(event.target.value)}/>
+        <input type="text" placeholder="1" value={groupNumber} onChange={ e => setGroupNumber(e.target.value)}/>
         <label> groups </label>
         <button type="button" onClick={() => {
         setGroupNumber(groupNumber)
