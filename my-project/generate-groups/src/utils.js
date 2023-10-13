@@ -5,7 +5,7 @@ export const header = "Group Generator!"
 export const exampleNames = [
                     'Georgina',
                     'Jiwoo',
-                    'Rashi',
+                    'Rashi', 
                     'Layla',
                     'Samuel',
                     'Joe',
@@ -35,7 +35,6 @@ export const exampleNames = [
 
 export function generateTable(names) {
 
-    console.log(names, "names in groupName")
 
     if (!names.length) return {0:[]}
 
@@ -46,7 +45,6 @@ export function generateTable(names) {
         if (tabledNames[row]) tabledNames[row].push(name)
         else tabledNames[row] = [name]
     })
-    console.log(tabledNames, "tabledNames inside generateTable")
 
     return tabledNames
 }
