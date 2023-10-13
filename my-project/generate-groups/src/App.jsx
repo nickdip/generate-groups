@@ -8,28 +8,35 @@ import AddNames from './components/addNames'
 
 function App() {
 
-  function updateNames(event) {
-    setNames(newName)
-  }
 
   function updateGroupedTable(bool) {
     setGroupedTable(bool)
   }
 
+  function updateNamesList(names) {
+    setNamesList((currentNames) => {
+      const newList = [...currentNames, names]
+      setTabledNames(generateTable(newList))
+      return newList
+    })
+  }
 
-  const names = []
-  const tabledNames = generateTable(names)
-  const [ inputNames, setNames ] = useState(tabledNames)
+
+  const [ namesList, setNamesList ] = useState([])
+
+
+  const [ tabledNames, setTabledNames ] = useState({0: []})
+
 
   const [ groupedTable, setGroupedTable ] = useState(false)
-  const rows = Object.keys(inputNames)
+  const rows = Object.keys(tabledNames)
  
   return (
     <div className = "App">
       < Header message={header} />
-      < NamesList names={ inputNames } rows={rows} groupBool = { groupedTable }/>
-      < AddNames names={names} updateNames={updateNames} />
-      < GenerateGroups names={names} updateNames={updateNames} updateGroupedTable={updateGroupedTable}/>
+      < NamesList names={ tabledNames } rows={rows} groupBool = { groupedTable }/>
+      < AddNames currentNames={namesList} updateNamesList={updateNamesList} />
+      < GenerateGroups namesList={namesList} setTabledNames={setTabledNames} updateGroupedTable={updateGroupedTable}/>
       <button onClick={()=>{location.reload()}}>Reset</button>
     </div>
       )

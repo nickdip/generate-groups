@@ -35,6 +35,8 @@ export const exampleNames = [
 
 export function generateTable(names) {
 
+    console.log(names, "names in groupName")
+
     if (!names.length) return {0:[]}
 
     const tabledNames = {}
@@ -44,9 +46,11 @@ export function generateTable(names) {
         if (tabledNames[row]) tabledNames[row].push(name)
         else tabledNames[row] = [name]
     })
+    console.log(tabledNames, "tabledNames inside generateTable")
 
     return tabledNames
 }
+
 
 export function groupNames(names, groupNumber) {
     const namesCopy = [...names]
@@ -65,4 +69,10 @@ export function groupNames(names, groupNumber) {
 
     if (namesCopy.length) namesCopy.forEach((name, index) => groupedNames[index].push(name))
     return groupedNames
+}
+
+
+export function checkName(name) {
+    if (/^ +$/g.test(name)) return false
+    
 }
