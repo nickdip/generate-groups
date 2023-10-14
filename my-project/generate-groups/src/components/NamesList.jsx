@@ -2,6 +2,9 @@
 
 
 export function NamesList({ names, rows, groupBool }) {
+
+    if (!names[0].length) return null
+    
     let group = groupBool ? "grouped" : "ungrouped"
     return (<table className ={group + "-namesTable"}>
     <tbody>

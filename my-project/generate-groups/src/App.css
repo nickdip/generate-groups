@@ -7,8 +7,47 @@ body {
   background-color: rgb(58, 0, 0);
 }
 
+
+
+button {
+  align-items: center;
+  margin: 10px;
+  padding: 10px 2px;
+  width: 120px;
+}
+
+
 tbody {
   display: flex;
+}
+
+.add-name-input {
+  width: 100%;
+  font-size: 2rem;
+}
+
+.error-message {
+  color: rgb(255, 213, 0);
+}
+
+.group-button {
+  margin: 20px;
+}
+
+.group-form {
+  margin-top: 15px;
+}
+
+.group-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.group-number-input {
+  width: 10%;
+  font-size: 2rem;
+  text-align: center;
 }
 
 #root {
@@ -23,6 +62,10 @@ h1 {
 }
 
 .App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-size: 1.2rem;
   text-align: center;
   margin-left: 10%;
@@ -88,37 +131,27 @@ h1 {
 
 /* column ungrouped. */
 .ungrouped-row-0 {
-  display: flex;
-  flex-wrap: wrap;
   opacity: 0.8;
-  border:rgba(0, 0, 0, 0.033) solid 1px;
   
 }
 
 .ungrouped-row-1 {
-  display: flex;
-  flex-wrap: wrap;
   opacity: 0.8;
-  border:rgba(0, 0, 0, 0.033) solid 1px;
 }
 
 
 .ungrouped-row-2 {
-  display: flex;
-  flex-wrap: wrap;
   opacity: 0.8;
-  border:rgba(0, 0, 0, 0.033) solid 1px;
 }
 
 .ungrouped-row-3 {
-  display: flex;
-  flex-wrap: wrap;
   opacity: 0.8;
-  border:rgba(0, 0, 0, 0.033)solid 1px;
 }
 
 
 .ungrouped-name {
+  display: flex;
+  flex-wrap: wrap;
   color: black;
   margin-left: 0px;
   margin-right: 0px;
@@ -128,13 +161,9 @@ h1 {
 .ungrouped-namesTable {
   background-color: white;
   table-layout: fixed;
-  flex-wrap: wrap;
   align-items: center;
   margin-left: 20%;
   margin-right: 20%;
   margin-bottom: 10px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-  box-sizing: border-box;
-  border-collapse: collapse;
 }
 

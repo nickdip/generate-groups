@@ -35,6 +35,7 @@ export const exampleNames = [
 
 export function generateTable(names) {
 
+    console.log(names)
 
     if (!names.length) return {0:[]}
 
@@ -45,7 +46,7 @@ export function generateTable(names) {
         if (tabledNames[row]) tabledNames[row].push(name)
         else tabledNames[row] = [name]
     })
-
+    console.log(tabledNames)
     return tabledNames
 }
 

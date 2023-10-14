@@ -3,7 +3,7 @@
 function displayError( {error} ) {
     return (
         <div className="error">
-            <p>{error}</p>
+            <p className="error-message">{error}</p>
         </div>
     )
 }

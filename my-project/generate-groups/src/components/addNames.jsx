@@ -25,7 +25,7 @@ function AddNames(  { currentNames, updateNamesList, setErrorMessage }) {
         else names = [newName]
 
         names.forEach( (name) => {
-            console.log(name)
+ 
             name = name.trim()
             if (currentNames.includes(name) || added.includes(name)) {
                 duplicates.push(name)
@@ -39,7 +39,6 @@ function AddNames(  { currentNames, updateNamesList, setErrorMessage }) {
         if (duplicates.length === 1) setErrorMessage(`Duplicate entry was not added: ${duplicates[0]} is already in the list`)
         if (duplicates.length === 2) setErrorMessage(`Duplicate entries were not added: ${duplicates[0]} and ${duplicates[1]} are already in the list`)
         else if (duplicates.length > 2) setErrorMessage(`Duplicate entries were not added: ${duplicates.slice(0,-1).join(', ')} and ${duplicates.at(-1)} are already in the list`)
-        console.log(added)
         added.forEach( (name) => updateNamesList(name) )
 
         setNewName('')
@@ -54,14 +53,14 @@ function AddNames(  { currentNames, updateNamesList, setErrorMessage }) {
 
     return (
         <form>
-        <label htmlFor={currentNames}> Add Name(s):</label>
         <input 
+            className = "add-name-input"
             type="text" 
-            placeholder="Darth Vadar" 
+            placeholder="e.g Darth Vader" 
             value={newName} 
             onChange={ e => setNewName(e.target.value)}
             onKeyDown={e => enterPress(e)}/>
-        <button type="button" onClick={addNewNames}>Add Name(s)</button>
+        <button type="button" className="add-name-btn" onClick={addNewNames}>Add Name(s)</button>
         </form>
     )
 

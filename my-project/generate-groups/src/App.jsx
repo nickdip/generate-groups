@@ -15,6 +15,7 @@ function App() {
   }
 
   function updateNamesList(names) {
+    
     setNamesList((currentNames) => {
       const newList = [...currentNames, names]
       setTabledNames(generateTable(newList))
@@ -37,10 +38,10 @@ function App() {
       < AddNames currentNames={namesList} 
                   updateNamesList={updateNamesList}
                   setErrorMessage={setErrorMessage} />
+      < Error error={errorMessage}/>
       < GenerateGroups namesList={namesList} 
                         setTabledNames={setTabledNames} 
                         updateGroupedTable={updateGroupedTable}/>
-      < Error error={errorMessage}/>
       <button onClick={()=>{location.reload()}}>Reset</button>
     </div>
       )
