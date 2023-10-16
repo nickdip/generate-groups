@@ -15,7 +15,7 @@ To run this project on your local machine, follow these steps:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/**yourusername/generate-groups
+   git clone https://github.com/**yourusername**/generate-groups
    cd generate-groups
 
 2. **Install dependencies:**:
